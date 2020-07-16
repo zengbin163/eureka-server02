@@ -1,0 +1,16 @@
+server:
+   port: 7001
+   host: 127.0.0.1
+
+logging:
+   level:
+      com.chihuo.eureka-server: debug
+
+eureka:
+   instance:
+      hostname: localhost
+   client:
+      registerWithEureka: false    #是否要注册到eureka
+      fetchRegistry: false         #表示是否从Eureka Server获取注册信息
+serviceUrl:
+   defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #单机配置
